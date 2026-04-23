@@ -34,6 +34,15 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "baseUrl": "src",
+    "paths": {
+      "pages/*": ["pages/*"],
+      "components/*": ["components/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+      "hooks": ["hooks.ts"],
+      "state": ["state.ts"],
+      "static/*": ["static/*"]
+    },
     "types": [
       "vite/client"
     ]

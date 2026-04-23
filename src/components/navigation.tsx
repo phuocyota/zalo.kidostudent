@@ -10,15 +10,6 @@ const tabs: Record<string, MenuItem> = {
     label: "Trang chủ",
     icon: <Icon icon="zi-home" />,
   },
-  "/notification": {
-    label: "Thông báo",
-    icon: <Icon icon="zi-notif" />,
-  },
-  "/cart": {
-    label: "Giỏ hàng",
-    icon: <CartIcon />,
-    activeIcon: <CartIcon active />,
-  },
   "/profile": {
     label: "Cá nhân",
     icon: <Icon icon="zi-user" />,
@@ -27,7 +18,7 @@ const tabs: Record<string, MenuItem> = {
 
 export type TabKeys = keyof typeof tabs;
 
-export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/category", "/result"];
+export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/category", "/result", "/student", "/parent"];
 
 export const Navigation: FC = () => {
   const keyboardVisible = useVirtualKeyboardVisible();
