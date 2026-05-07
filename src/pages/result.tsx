@@ -1,11 +1,10 @@
 import React, { FC, ReactNode, useEffect, useState } from "react";
-import { Box, Button, Header, Page, Text, useNavigate } from "zmp-ui";
+import { Box, Button, Header, Page, Text, useNavigate, useLocation } from "zmp-ui";
 import {
   AsyncCallbackFailObject,
   CheckTransactionReturns,
   Payment,
 } from "zmp-sdk";
-import { useLocation } from "react-router";
 import { useResetRecoilState } from "recoil";
 import { cartState } from "state";
 import {

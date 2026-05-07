@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { Route, Routes } from "react-router";
-import { Box } from "zmp-ui";
+import { Box, useLocation } from "zmp-ui";
 import { Navigation } from "./navigation";
 import HomePage from "../pages/index";
 import StudentPage from "../pages/student";
@@ -27,24 +26,27 @@ if (import.meta.env.DEV) {
   );
 }
 
+const pages: Record<string, React.ReactNode> = {
+  "/": <HomePage />,
+  "/student": <StudentPage />,
+  "/parent": <ParentPage />,
+  "/search": <SearchPage />,
+  "/category": <CategoryPage />,
+  "/notification": <NotificationPage />,
+  "/cart": <CartPage />,
+  "/profile": <ProfilePage />,
+  "/result": <CheckoutResultPage />,
+};
+
 export const Layout: FC = () => {
   useHandlePayment();
+  const location = useLocation();
 
   return (
     <Box flex flexDirection="column" className="h-screen">
       <ScrollRestoration />
       <Box className="flex-1 flex flex-col overflow-hidden">
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/student" element={<StudentPage />}></Route>
-          <Route path="/parent" element={<ParentPage />}></Route>
-          <Route path="/search" element={<SearchPage />}></Route>
-          <Route path="/category" element={<CategoryPage />}></Route>
-          <Route path="/notification" element={<NotificationPage />}></Route>
-          <Route path="/cart" element={<CartPage />}></Route>
-          <Route path="/profile" element={<ProfilePage />}></Route>
-          <Route path="/result" element={<CheckoutResultPage />}></Route>
-        </Routes>
+        {pages[location.pathname] || <HomePage />}
       </Box>
       <Navigation />
     </Box>

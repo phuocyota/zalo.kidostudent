@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { Page } from "zmp-ui";
-import { useNavigate } from "react-router";
+import { Page, useNavigate } from "zmp-ui";
 
 const StudentPage: FC = () => {
   const navigate = useNavigate();

@@ -1,8 +1,7 @@
 import { useVirtualKeyboardVisible } from "hooks";
 import React, { FC, useMemo, useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, BottomNavigation, Icon, useNavigate } from "zmp-ui";
 import { MenuItem } from "types/menu";
-import { BottomNavigation, Icon } from "zmp-ui";
 import { CartIcon } from "./cart-icon";
 
 const tabs: Record<string, MenuItem> = {
@@ -30,7 +29,7 @@ export const Navigation: FC = () => {
   }, [location]);
 
   if (noBottomNav || keyboardVisible) {
-    return <></>;
+    return <></>;  
   }
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { FC, useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation } from "zmp-ui";
 
 const scrollPositions = {};
 
