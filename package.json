@@ -27,7 +27,6 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.2",
     "recoil": "^0.7.7",
     "swiper": "^9.1.0",
     "zmp-sdk": "^2.39.9",
@@ -36,7 +35,6 @@
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.21",
